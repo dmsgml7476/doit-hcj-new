@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문</title>
+  </head>
+  <body>
+    <button id="btn">비밀번호 생성 시작</button>
+
+    <script>
+      //  Do it! 사용자가 입력한 숫자가 3의 배수인지 판별하기
+
+      const button = document.getElementById("btn");
+
+      const 비밀번호생성 = () => {
+        const password = prompt("비밀번호를 생성하세요.");
+        console.log(password.length);
+
+        // if 중첩
+
+        // if (password.length === 0) {
+        //   alert("비밀번호를 입력하세요.");
+        // } else {
+        //   if (password.length <= 4) {
+        //     alert("비밀번호가 너무 짧습니다.");
+        //   } else {
+        //     if (password.length > 12) {
+        //       alert("비밀번호가 너무 깁니다.");
+        //     } else {
+        //       alert("훌륭합니다.");
+        //     }
+        //   }
+        // }
+
+        // early return 얼리 리턴
+        // 혹은 예외 처리
+
+        // if (조건) {
+        //   return 마지막 실행코드
+        // } else, else if 사용안함
+        // 바로 다음줄에 코드 작성
+
+        if (password.length === 0) {
+          return alert("비밀번호를 입력하세요.");
+        }
+        if (password.length <= 4) {
+          return alert("비밀번호가 너무 짧습니다.");
+        }
+        if (password.length > 12) {
+          return alert("비밀번호가 너무 깁니다.");
+        }
+        return;
+        alert("훌륭합니다.");
+
+        // return => 코드를 끝내버린다. return 아래는 작동 안함.
+        // return => 앞에 문자열/숫자 등의 값을 적으면 그 값은 출력한다.
+
+        // 회원가입시 회원에게 비밀번호를 작성하라고 시킴
+        // 비밀번호를 입력하지 않으면 안됩니다.
+        // 비밀번호가 입력되지 않았다면 경고.
+        // 비밀번호 길이가 4자리 이하면 안됩니다.
+        // 비밀번호 길이가 12자리 초과하면 안됩니다.
+        // 훌륭한 비밀번호 입니다 라고 축하해주기.
+      };
+
+      button.onclick = 비밀번호생성;
+    </script>
+  </body>
+</html>

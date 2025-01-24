@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문</title>
+  </head>
+  <body>
+    <script>
+      //  Do it! OR 연산자를 사용해 조건 체크하기
+      const person = {
+        name: "박은희", // const = name '박은희' => 객체에서 값이름 값
+        tel: "01012341234", // 객체 안의 값은, 로 구분한다.
+      }; // {} 메모리를 할당해줌.
+
+      console.log(person);
+      console.log(typeof person);
+
+      console.log(typeof person);
+      // person 의 name 를 출력하세요
+
+      console.log(person.name);
+      console.log(person["name"]);
+
+      // [person 의 tell을 출력하세요]
+      console.log(person.tel);
+      console.log(person["tel"]);
+
+      //변수명 me 로 객체를 만드세요. 객체 안에 이름, 거주지, 연락처, 방송나이, 방송용 키
+      // console.log() 이름, 거주지, 연락처, 나이, 키를 출력하세요. 순서 상관 x 사용하기
+
+      const me = {
+        name: "바구니",
+        address: "대전",
+        tel: "01015152424",
+        age: "40",
+        tall: "157",
+      };
+
+      console.log(me["name"]);
+      console.log(me["address"]);
+      console.log(me["tel"]);
+      console.log(me["age"]);
+      console.log(me["tall"]);
+
+      let stringCopy = "";
+      const randomString = "adskdgjlkjslf";
+      stringCopy;
+
+      const 객체값추출기 = (객체, 값) => {
+        console.log(객체[`$값`]);
+        console.log(객체.값);
+      };
+
+      const 객체생성기 = (객체, 값) => {
+        let copy = { ...객체 };
+        copy[`${값이름}`] = 값;
+
+        console.log(copy);
+      };
+
+      객체값추출기(me, "나이");
+
+      // array 배열 = 객체와 마찬가지로 모든 타입의 값을 담을 수 있음
+
+      const array = ["a", 12, false, undefined, null]; // 좋지 않은 배열
+      // 배열에는 같은 형태의 타입을 담는 것이 좋다.
+
+      const anotherArray = [array, array, array];
+      console.log(anotherArray);
+      console.log(array);
+      console.log(typeof array);
+    </script>
+  </body>
+</html>

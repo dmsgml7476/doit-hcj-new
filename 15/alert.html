@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alert문</title>
+  </head>
+  <body>
+    <!-- Do it! 알림 창 만들기 -->
+    <button onclick="나의함수()">TEST</button>
+    <script>
+      //나의함수라는 함수를 만들어주세요
+
+      function 나의함수() {
+        const name = prompt("당신의 이름은 무엇입니까?");
+
+        if (name.length === 0) {
+          return alert("이름을 입력해주세요");
+        }
+        alert(`안녕하세요, ${name} 님!`);
+      }
+    </script>
+    <script>
+      //   const ageLimit = 19;
+      //   const person = 20;
+      let message = "";
+
+      //   if (person > ageLimit) {
+      //     message = "환영합니다.";
+      //   } else {
+      //     message = "급식 ㄴㄴ";
+      //   }
+
+      //   alert(message);
+      //   alert() 괄호 안에 문자열 또는 숫자 담으면 됨 그럼 경고창 보여줌 // 문구를 보여주는 popup창과 비슷
+
+      //   confirm(message);
+
+      //   const res = confirm("급식입니까?");
+      //   // alert 과 다른 점 2가지 취소 버튼 있음.
+      //   // 확인과 취소 버튼 눌렀을 때 동작을 다르게 할 수 있음.
+      //   console.log(res);
+
+      ///1. 급식일때 라는 이름으로 함수를 만들어주세요. {} 중가로 안에 console.log() 를 사용하여 급식이여 안녕이라고 출력해주세요.
+
+      function 급식일때() {
+        console.log("급식이여 안녕" + msg);
+      }
+
+      ///2. 성인일때 라는 이름으로 함수를 만들어주세요. 안에 console.log를 사용하여 안녕하세요 어르신이라고 출력해 주세요.
+
+      function 성인일때() {
+        console.log("안녕하세요. 어르신");
+      }
+
+      //   if (res) {
+      //     급식일때();
+      //   } else {
+      //     성인일때();
+      //   }
+
+      // 함수를 선언할때는 function 을 사용합니다.
+      // 함수를 사용할 때 함수를 호출한다. 라는 표현을 씁니다.
+      // 함수 호출할때는 함수명 + () 를 사용합니다.
+
+      // alert/ confirm 과 같이 함수명의 () 안에 뭔가를 넣어줘야 하기도 한다.
+
+      function click() {
+        alert("hello");
+      }
+    </script>
+  </body>
+</html>
