@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>등교 비용 계산</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <label for="method">등교 수단</label>
+        <button id="method">선택</button>
+      </div>
+      <div>
+        <label for="fare">요금</label>
+        <button id="fare">선택</button>
+      </div>
+      <div>
+        <label for="dates">등교 일수</label>
+        <button id="dates">선택</button>
+      </div>
+
+      <button id="cal">비용 계산</button>
+    </main>
+
+    <script>
+      const method = document.getElementById("method");
+      const fare = document.getElementById("fare");
+      const dates = document.getElementById("dates");
+      const cal = document.getElementById("cal");
+
+      let option = "";
+      let price = 0;
+      let schoolDates = 0;
+
+      method.onclick = () => {
+        const a = prompt("등교 수단을 입력하세요.");
+        // 조건문을 사용해서 a가 입력되지 않았을 때는 경고!
+        if (a.length === 0) {
+          return alert("등교 수단이 입력되지 않았습니다.");
+        }
+
+        method.innerText = a;
+        option = a;
+      };
+
+      fare.onclick = () => {
+        const b = prompt("요금을 입력해주세요.");
+        if (b.length === 0) {
+          return alert("요금이 입력되지 않았습니다.");
+        }
+
+        fare.innerText = b;
+        price = Number(b);
+      };
+
+      dates.onclick = () => {
+        const c = prompt("등교일수를 입력하세요.");
+        if (c.length === 0) {
+          return alert("등교 일수가 입력되지 않았습니다.");
+        }
+
+        dates.innerText = c;
+        schoolDates = Number(c);
+      };
+
+      cal.onclick = () => {
+        console.log(option, price, schoolDates);
+
+        // 1. 등교수단이 입력되지 않았을 때 경고
+        // 1-2. 다시 입력하도록 해보자
+        // 2. 요금이 입력되지 않았을때 경고
+        // 2-2. 다시 입력하도록 해보자
+        // 3. 등교 일수가 입력되지 않았을 때 경고
+        // 3-2. 다시 입력하도록 해보자
+
+        if (option.length === 0) {
+          alert("등교수단이 입력되지 않았습니다.");
+
+          return method.onclick();
+        }
+
+        if (price === 0) {
+          alert("요금이 입력되지 않았습니다.");
+
+          return fare.onclick();
+        }
+
+        if (schoolDates === 0) {
+          alert("등교일수가 입력되지 않았습니다.");
+
+          return dates.onclick();
+        }
+
+        document.write(
+          `<h1>등교수단은 ${option}이고, 등교일수는 ${schoolDates}일이며, 등교비용은 ${
+            price * schoolDates
+          }이다.`
+        );
+      };
+    </script>
+  </body>
+</html>

@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>while</title>
-  <style>
-    body {
-      font-size:2em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-  </style>
-</head>
-<body>
-  <script>
-    // Do it! while문을 사용해 별 표시하기
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while</title>
+    <style>
+      body {
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Do it! while문을 사용해 별 표시하기a11
+      // while ~ 하는 동안
+      // while (조건) {코드}
 
-  </script>
-</body>
+      const text = prompt("텍스트를 입력하세요.");
+
+      // for ~ 하는 동안
+      // for (변수선언, 조건, 규칙) (실행코드)
+      // let a = 2;
+      // for (let i = 0; i <= 5; i = i + 1) {
+      //   document.write(`<p>${a} X ${i + 1}</p>`);
+      // }
+
+      for (let i = 1; i < 32; i++) {
+        // i = i + 1 // i += 1 // i ++
+        console.log("i의 값은", i, "입니다.");
+        document.write(`<p>${i}일</p>`);
+      }
+
+      let b = 0;
+      // while (b < 10) {
+      //   b = b + 1;
+      //   alert(`현재 b의 값은 ${b}입니다`);
+      // }
+
+      // do {실행시킬 코드} while (조건);
+
+      do {
+        b = b + 1;
+        console.log(b);
+      } while (b < 5);
+
+      let array = Array.from({ length: 31 }, (_, i) => i + 1);
+      console.log(array);
+    </script>
+  </body>
 </html>
